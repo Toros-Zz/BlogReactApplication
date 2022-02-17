@@ -1,3 +1,33 @@
-.starter {
-  font-size: 18px;
+.App {
+  &__header {
+    display: flex;
+
+    background-color: lightgray;
+    padding: 10px 25px;
+
+    border-bottom: 1px solid black;
+  }
+  
+  &__title {
+    margin-right: 15px;
+  }
+
+  &__button:first-of-type {
+    margin-right: 15px;
+  }
+
+  &__main {
+    display: flex;
+    padding: 15px;
+  }
+
+  &__sidebar {
+    flex-grow: 1;
+  }
+
+  &__content {
+    width: 350px;
+    min-width: 300px;
+    text-align: center;
+  }
 }

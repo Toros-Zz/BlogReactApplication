@@ -1,0 +1,11 @@
+.CommentList {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    min-height: 30px;
+  }
+
+  &__button {
+    height: 20px;
+  }
+}

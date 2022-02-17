@@ -1,0 +1,44 @@
+.PostsList {
+  padding: 10px;
+  width: 100%;
+  border: 3px solid lightcyan;
+  border-radius: 30px;
+
+  &__subtitle {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+
+    background-color: rgb(250, 250, 250);
+    border: 1px solid lightcyan;
+
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+  }
+
+  &__post {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__body {
+    font-size: 15px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__button-open {
+    margin-right: 5px;
+  }
+}

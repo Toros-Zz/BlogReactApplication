@@ -1,9 +1,7 @@
-# React TypeScript Starter Pack
+# React Redux TypeScript
 
-To use this template click `Use this template`
+-[DEMO]()
 
-### Available Scripts
-
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
+- PDF document with description - https://drive.google.com/open?id=1qYTKMXrVVsnes8M1KxTnscWfHZIaH4cW
+- API link - https://bloggy-api.herokuapp.com
+- API documentation - https://documenter.getpostman.com/view/8110984/SVSHqohE

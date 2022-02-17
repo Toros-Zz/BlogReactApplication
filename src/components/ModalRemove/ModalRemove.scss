@@ -1,0 +1,29 @@
+.Modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 200px;
+  width: 350px;
+
+  border: 1px solid darkgray;
+  background-color: white;
+
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+}

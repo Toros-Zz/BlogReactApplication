@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Link, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { PostsList } from './components/PostsList';
 import { PostDetails } from './components/PostDetails';
@@ -16,18 +16,18 @@ export const App: React.FC = () => {
         <h1 className="title App__title">
           React/Redux Blog
         </h1>
-        <Link
+        <NavLink
           to="/"
           className="button App__button"
         >
           Posts
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/addpost"
           className="button App__button"
         >
           Add post
-        </Link>
+        </NavLink>
       </header>
       <main className="App__main">
         <Routes>

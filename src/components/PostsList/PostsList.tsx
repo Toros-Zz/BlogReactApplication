@@ -1,17 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
-import { getPosts, removePost } from '../../api/posts';
-import { setActivePostId, setAllPosts, setEditModel } from '../../store/actions';
-import { getActivePostId, getAllPosts, hasEditModal } from '../../store/selectors';
+import { getPosts } from '../../api/posts';
+import {
+  setActivePostId,
+  setAllPosts,
+  setEditModel,
+  setRemoveModal,
+} from '../../store/actions';
+import {
+  getActivePostId,
+  getAllPosts,
+  hasEditModal,
+  hasRemoveModal,
+} from '../../store/selectors';
 import { Loader } from '../Loader';
 import { ModalEdit } from '../ModalEdit';
 import './PostsList.scss';
+import { ModalRemove } from '../ModalRemove';
 
 export const PostsList: React.FC = () => {
   const dispatch = useDispatch();
   const posts = useSelector(getAllPosts);
   const isEditModal = useSelector(hasEditModal);
+  const isRemoveModal = useSelector(hasRemoveModal);
   const activePostId = useSelector(getActivePostId);
   const [isLoader, setLoader] = useState(false);
 
@@ -47,8 +59,8 @@ export const PostsList: React.FC = () => {
   };
 
   const handlerRemovePost = async (event: React.MouseEvent<HTMLButtonElement>) => {
-    await removePost(+event.currentTarget.value);
-    loadPosts();
+    dispatch(setActivePostId(+event.currentTarget.value));
+    dispatch(setRemoveModal(true));
   };
 
   if (isLoader) {
@@ -111,6 +123,9 @@ export const PostsList: React.FC = () => {
       </ul>
       {
         isEditModal && <ModalEdit />
+      }
+      {
+        isRemoveModal && <ModalRemove />
       }
     </div>
   );

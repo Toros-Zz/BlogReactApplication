@@ -4,6 +4,7 @@ import {
   SET_ALL_POSTS,
   SET_COMMENTS,
   SET_MODEL_EDIT,
+  SET_MODEL_REMOVE,
 } from './actions';
 
 export type RootState = {
@@ -11,6 +12,7 @@ export type RootState = {
   activePostId: number,
   comments: CommentPost[];
   isEditModel: boolean;
+  isRemoveModel: boolean;
 };
 
 export const initialState: RootState = {
@@ -18,12 +20,16 @@ export const initialState: RootState = {
   activePostId: 0,
   comments: [],
   isEditModel: false,
+  isRemoveModel: false,
 };
 
 const rootReducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
     case SET_MODEL_EDIT:
       return { ...state, isEditModel: action.payloud };
+
+    case SET_MODEL_REMOVE:
+      return { ...state, isRemoveModel: action.payloud };
 
     case SET_COMMENTS:
       return { ...state, comments: action.payloud };

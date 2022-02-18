@@ -36,12 +36,12 @@ export const ModalRemove: React.FC = () => {
       <Modal
         isOpen={isOpen}
         onRequestClose={handlerCloseModal}
-        className="Modal"
+        className="ModalRemove"
       >
-        <h2 className="subtitle Modal__title">
+        <h2 className="subtitle ModalRemove__title">
           Are you sure?
         </h2>
-        <section className="Modal__buttons">
+        <section className="ModalRemove__buttons">
           <button
             type="button"
             className="button"
